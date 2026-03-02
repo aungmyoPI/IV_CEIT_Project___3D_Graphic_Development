@@ -1,0 +1,143 @@
+#include <iostream>
+#include <vector>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp> // only for glm::ortho, glm::perspective if needed
+#include <glm/gtc/type_ptr.hpp>
+
+// Vertex structure
+struct Vertex
+{
+    glm::vec4 pos; // homogeneous coordinates (x,y,z,w) -> w=1 for position
+};
+
+// Phase 1: Vertex Shader (apply transformation)
+glm::vec4 vertexShader(const glm::vec4 &v, const glm::mat4 &transform)
+{
+    // Multiply vertex by transformation matrix (model/view/projection)
+    // This simulates GPU vertex shader stage
+    return transform * v;
+}
+
+// Phase 2: Convex Hull (for 3 points, it's just the triangle)
+void convexHull(const std::vector<Vertex> &verts)
+{
+    // Convex hull is the smallest convex polygon containing all vertices
+    // For 3 points, the hull is simply the triangle itself
+    std::cout << "Convex Hull: Triangle formed by vertices\n";
+    for (auto &v : verts)
+    {
+        std::cout << "(" << v.pos.x << "," << v.pos.y << "," << v.pos.z << "," << v.pos.w << ")\n";
+    }
+}
+
+// Phase 3: Simplex (edges)
+void simplex(const std::vector<Vertex> &verts)
+{
+    // A simplex in 2D is a triangle; edges are vector differences
+    std::cout << "Simplex edges:\n";
+    glm::vec4 AB = verts[1].pos - verts[0].pos; // edge AB
+    glm::vec4 AC = verts[2].pos - verts[0].pos; // edge AC
+    glm::vec4 BC = verts[2].pos - verts[1].pos; // edge BC
+    std::cout << "AB = (" << AB.x << "," << AB.y << "," << AB.z << "," << AB.w << ")\n";
+    std::cout << "AC = (" << AC.x << "," << AC.y << "," << AC.z << "," << AC.w << ")\n";
+    std::cout << "BC = (" << BC.x << "," << BC.y << "," << BC.z << "," << BC.w << ")\n";
+}
+
+// Phase 4: Tessellation (split edges in half)
+std::vector<Vertex> tessellate(const std::vector<Vertex> &verts)
+{
+    // Tessellation subdivides triangle into smaller triangles
+    // Midpoints are computed by averaging endpoints
+    std::vector<Vertex> subdiv;
+    glm::vec4 MAB = 0.5f * (verts[0].pos + verts[1].pos); // midpoint AB
+    glm::vec4 MAC = 0.5f * (verts[0].pos + verts[2].pos); // midpoint AC
+    glm::vec4 MBC = 0.5f * (verts[1].pos + verts[2].pos); // midpoint BC
+
+    // Collect subdivided vertices
+    subdiv.push_back({verts[0].pos});
+    subdiv.push_back({MAB});
+    subdiv.push_back({MAC});
+    subdiv.push_back({verts[1].pos});
+    subdiv.push_back({MBC});
+    subdiv.push_back({verts[2].pos});
+
+    std::cout << "Tessellation midpoints:\n";
+    std::cout << "MAB = (" << MAB.x << "," << MAB.y << ")\n";
+    std::cout << "MAC = (" << MAC.x << "," << MAC.y << ")\n";
+    std::cout << "MBC = (" << MBC.x << "," << MBC.y << ")\n";
+
+    return subdiv;
+}
+
+// Phase 5: Parameterization (barycentric coordinates)
+glm::vec3 barycentric(const glm::vec2 &P, const glm::vec2 &A, const glm::vec2 &B, const glm::vec2 &C)
+{
+    // Compute barycentric coordinates of point P relative to triangle ABC
+    // Formula derived from area ratios
+    float denom = (B.y - C.y) * (A.x - C.x) + (C.x - B.x) * (A.y - C.y);
+    float alpha = ((B.y - C.y) * (P.x - C.x) + (C.x - B.x) * (P.y - C.y)) / denom;
+    float beta = ((C.y - A.y) * (P.x - C.x) + (A.x - C.x) * (P.y - C.y)) / denom;
+    float gamma = 1.0f - alpha - beta; // ensures sum=1
+    return glm::vec3(alpha, beta, gamma);
+}
+
+// Phase 6: Rasterization (simulate pixel coverage)
+void rasterize(const glm::vec2 &A, const glm::vec2 &B, const glm::vec2 &C, int gridSize)
+{
+    // Rasterization: check which discrete pixel centers fall inside triangle
+    // Use barycentric coordinates: if all >=0, point lies inside
+    std::cout << "Rasterization:\n";
+    for (int i = 0; i <= gridSize; i++)
+    {
+        for (int j = 0; j <= gridSize; j++)
+        {
+            glm::vec2 P(i / (float)gridSize, j / (float)gridSize); // pixel center normalized
+            glm::vec3 bc = barycentric(P, A, B, C);
+            if (bc.x >= 0 && bc.y >= 0 && bc.z >= 0)
+            {
+                std::cout << "Pixel (" << i << "," << j << ") inside triangle\n";
+            }
+        }
+    }
+}
+
+int main()
+{
+    // Initial triangle vertices in homogeneous coordinates
+    std::vector<Vertex> verts = {
+        {{0, 0, 0, 1}}, {{1, 0, 0, 1}}, {{0, 1, 0, 1}}};
+
+    // Phase 1: Vertex Shader
+    glm::mat4 identity = glm::mat4(1.0f); // identity transform
+    std::cout << "Phase 1: Vertex Shader\n";
+    for (auto &v : verts)
+    {
+        glm::vec4 transformed = vertexShader(v.pos, identity); // apply transform
+        std::cout << "Vertex: (" << transformed.x << "," << transformed.y << "," << transformed.z << "," << transformed.w << ")\n";
+    }
+
+    // Phase 2: Convex Hull
+    std::cout << "\nPhase 2: Convex Hull\n";
+    convexHull(verts);
+
+    // Phase 3: Simplex
+    std::cout << "\nPhase 3: Simplex\n";
+    simplex(verts);
+
+    // Phase 4: Tessellation
+    std::cout << "\nPhase 4: Tessellation\n";
+    auto subdiv = tessellate(verts);
+
+    // Phase 5: Parameterization
+    std::cout << "\nPhase 5: Parameterization\n";
+    glm::vec2 A(0, 0), B(1, 0), C(0, 1);
+    glm::vec2 P(0.25f, 0.25f);              // sample point
+    glm::vec3 bc = barycentric(P, A, B, C); // compute barycentrics
+    std::cout << "Point (0.25,0.25) barycentric = (" << bc.x << "," << bc.y << "," << bc.z << ")\n";
+
+    // Phase 6: Rasterization
+    std::cout << "\nPhase 6: Rasterization\n";
+    rasterize(A, B, C, 4); // simulate rasterization on 4x4 grid
+
+    return 0;
+}
