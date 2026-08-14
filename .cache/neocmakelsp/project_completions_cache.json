@@ -1,0 +1,91 @@
+{
+  "date": "2026-08-14T11:33:56.102005400+06:30",
+  "data": {
+    "D:\\lcmake\\IV_Project\\CMakeLists.txt": [
+      {
+        "label": "CMAKE_MSVC_RUNTIME_LIBRARY",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_CXX_STANDARD",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_CXX_STANDARD_REQUIRED",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_EXPORT_COMPILE_COMMANDS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "GLFW_BUILD_DOCS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt\n\nGLFW"
+      },
+      {
+        "label": "GLFW_INSTALL",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "GLFW_BUILD_TESTS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "GLFW_BUILD_EXAMPLES",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "ASSIMP_BUILD_TESTS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt\n\nAssimp - Using GIT_SHALLOW to fix the \"Early EOF\" download error"
+      },
+      {
+        "label": "ASSIMP_INSTALL",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "ASSIMP_BUILD_ASSIMP_TOOLS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "ASSIMP_WARNINGS_AS_ERRORS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "IMGUI_DIR",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      },
+      {
+        "label": "SOURCES",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt"
+      }
+    ]
+  }
+}

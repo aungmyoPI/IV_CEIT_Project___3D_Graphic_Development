@@ -1,0 +1,243 @@
+{
+  "date": "2026-08-14T11:33:56.103330+06:30",
+  "data": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 4
+          },
+          "end": {
+            "line": 6,
+            "character": 33
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "GLFW_BUILD_TESTS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 15,
+            "character": 4
+          },
+          "end": {
+            "line": 15,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "ASSIMP_BUILD_ASSIMP_TOOLS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 25,
+            "character": 4
+          },
+          "end": {
+            "line": 25,
+            "character": 29
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD_REQUIRED": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 5,
+            "character": 4
+          },
+          "end": {
+            "line": 5,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "GLFW_BUILD_DOCS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 13,
+            "character": 4
+          },
+          "end": {
+            "line": 13,
+            "character": 19
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt\n\nGLFW",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 4,
+            "character": 4
+          },
+          "end": {
+            "line": 4,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "ASSIMP_INSTALL": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 24,
+            "character": 4
+          },
+          "end": {
+            "line": 24,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "GLFW_INSTALL": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 14,
+            "character": 4
+          },
+          "end": {
+            "line": 14,
+            "character": 16
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "IMGUI_DIR": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 4
+          },
+          "end": {
+            "line": 38,
+            "character": 13
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "CMAKE_MSVC_RUNTIME_LIBRARY": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 3,
+            "character": 4
+          },
+          "end": {
+            "line": 3,
+            "character": 30
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "ASSIMP_BUILD_TESTS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 23,
+            "character": 4
+          },
+          "end": {
+            "line": 23,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt\n\nAssimp - Using GIT_SHALLOW to fix the \"Early EOF\" download error",
+      "is_function": false
+    },
+    "GLFW_BUILD_EXAMPLES": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 16,
+            "character": 4
+          },
+          "end": {
+            "line": 16,
+            "character": 23
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "SOURCES": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 66,
+            "character": 4
+          },
+          "end": {
+            "line": 66,
+            "character": 11
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    },
+    "ASSIMP_WARNINGS_AS_ERRORS": {
+      "location": {
+        "uri": "file:///D:/lcmake/IV_Project/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 26,
+            "character": 4
+          },
+          "end": {
+            "line": 26,
+            "character": 29
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: D:\\lcmake\\IV_Project\\CMakeLists.txt",
+      "is_function": false
+    }
+  }
+}
