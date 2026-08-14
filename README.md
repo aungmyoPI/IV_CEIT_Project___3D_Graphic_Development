@@ -209,8 +209,6 @@ The project is intended to run on:
 
 ## 🚀 Building
 
-### Linux
-
 Configure the project:
 
 ```bash
@@ -227,26 +225,6 @@ Run:
 
 ```bash
 ./build/IV_Project
-```
-
-### Windows — Visual Studio 2022
-
-Configure:
-
-```powershell
-cmake -S . -B build -G "Visual Studio 17 2022" -A x64
-```
-
-Build:
-
-```powershell
-cmake --build build --config Release
-```
-
-Run:
-
-```powershell
-.\build\Release\IV_Project.exe
 ```
 
 > **Note:** Make sure the `assets/` and `shaders/` directories are accessible from the application's runtime working directory. If the executable cannot find models, textures, or shaders, check the configured resource paths.
