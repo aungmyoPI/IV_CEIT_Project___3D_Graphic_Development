@@ -1,79 +1,140 @@
-# IV_Project — 3D Graphics Development
+# IV_Project: Cyber Samurai — 3D Graphics Development
 
-A real-time 3D graphics project developed as part of the **BE.CEIT final-year project at Technological University of Mandalay**.
+<p align="center">
+  <b>A real-time 3D action-adventure game blending traditional samurai culture with futuristic cyber-technology.</b>
+</p>
 
-The project is a small playable 3D application built from the ground up using **C++ and OpenGL**. It focuses on real-time rendering, character animation, terrain rendering, third-person camera control, instanced rendering, and interactive gameplay systems.
+<p align="center">
+  <img src="assets/screenshot_placeholder.png" alt="Cyber Samurai Gameplay Preview" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C%2B%2B17-blue.svg" alt="C++17">
+  <img src="https://img.shields.io/badge/Graphics-OpenGL%203.3-green.svg" alt="OpenGL 3.3">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg" alt="Platform">
+  <img src="https://img.shields.io/badge/Build-CMake-064F8C.svg" alt="CMake">
+  <img src="https://img.shields.io/badge/License-Academic-orange.svg" alt="Academic License">
+</p>
 
 ---
 
-## Features
+## 📖 Overview
+
+**Cyber Samurai** is a small playable 3D action-adventure application developed from the ground up using **C++ and OpenGL**.
+
+Developed as a final-year project for the **Department of Information Technology Engineering, Technological University (Mandalay)**, the project explores the practical implementation of a real-time 3D graphics pipeline together with gameplay systems.
+
+The project brings together:
+
+- Real-time OpenGL rendering
+- 3D terrain and environment rendering
+- Skeletal character animation
+- Third-person camera and player movement
+- GPU instanced rendering
+- Animation-driven combat
+- Enemy interaction and gameplay state management
+- Dear ImGui-based user interfaces
+- Asset loading and texture management
+
+The primary goal is to build a complete, playable application while gaining hands-on experience with the systems that form the foundation of modern real-time graphics.
+
+---
+
+## ✨ Features
 
 ### 🎨 Real-Time 3D Rendering
 
 - OpenGL 3.3 Core rendering pipeline
-- 3D terrain rendering with multiple terrain textures
+- 3D terrain rendering with multi-texture blending
 - Phong-based lighting
-- Skybox/environment rendering
-- Model loading through Assimp
-- Texture loading using `stb_image`
-- Depth testing and other standard OpenGL rendering techniques
+- Skybox environment rendering
+- Model loading through **Assimp**
+- Texture loading through **stb_image**
+- Depth testing and standard real-time rendering optimizations
 
-### 🧍 Player System
+### 🧍 Player & Character System
 
-- Playable 3D character
-- Third-person camera
-- Camera-relative movement
-- Character rotation based on movement direction
+- Playable 3D character with multiple animation states
+- Responsive third-person camera
+- Camera-relative WASD movement
+- Dynamic character rotation based on movement direction
 - Sprinting
-- Skeletal animation
-- Multiple player animation states
+- Skeletal animation playback
 
-### ⚔️ Combat
+### ⚔️ Combat System
 
 - Normal attack
-- Normal skill
-- Ultimate skill
-- Animation-driven combat states
-- Basic player/enemy interaction
+- Skill and ultimate skill actions
+- Animation-driven combat state management
+- Player-to-enemy interaction
+- Health and damage handling
+- Basic win/lose and game-state conditions
 
-### 🌲 Instanced Rendering
+### 🌲 GPU Instanced Rendering
 
-The project also explores GPU instancing for rendering large numbers of repeated objects efficiently.
+The project uses **GPU instancing** to efficiently render large numbers of repeated environmental objects.
 
 Examples include:
 
-- Instanced vegetation
-- Large numbers of environmental objects
-- Repeated meshes rendered using a single draw workflow
+- Instanced vegetation and foliage
+- Repeated environmental objects
+- Large quantities of visually similar scene elements
+
+Instancing reduces the CPU overhead associated with issuing separate draw calls for every repeated object.
 
 ### 🖥️ User Interface
 
 - Dear ImGui-based main menu
 - Game start interface
-- In-game guide/information overlay
-- Interactive UI controls
+- In-game guide and HUD overlays
+- Interactive configuration and debugging panels
 
 ---
 
-## Technology Stack
+## 🧱 Technology Stack
 
 | Category | Technology |
 |---|---|
-| Language | C++17 |
-| Graphics API | OpenGL 3.3 Core |
-| Windowing/Input | GLFW |
-| Mathematics | GLM |
-| Model Loading | Assimp |
-| UI | Dear ImGui |
-| Image Loading | stb_image |
-| OpenGL Loader | GLAD |
-| Build System | CMake |
-| Shader Language | GLSL |
-| Audio | miniaudio |
+| Language | **C++17** |
+| Graphics API | **OpenGL 3.3 Core** |
+| Windowing & Input | **GLFW** |
+| Mathematics | **GLM** |
+| Model Loading | **Assimp** |
+| UI Framework | **Dear ImGui** |
+| Image Decoding | **stb_image** |
+| OpenGL Loader | **GLAD** |
+| Build System | **CMake** |
+| Shader Language | **GLSL** |
+| Audio | **miniaudio** |
 
 ---
 
-## Project Structure
+## 🖼️ Media
+
+> Replace the placeholder below with an actual gameplay screenshot or animated GIF when available.
+
+<p align="center">
+  <img src="assets/screenshot_placeholder.png" alt="Cyber Samurai Gameplay Screenshot" width="90%"/>
+</p>
+
+### Gameplay GIF
+
+```text
+assets/
+└── gameplay.gif
+```
+
+Once a GIF is available, it can be embedded here:
+
+```markdown
+<p align="center">
+  <img src="assets/gameplay.gif" alt="Cyber Samurai Gameplay" width="90%"/>
+</p>
+```
+
+---
+
+## 🏗️ Project Structure
 
 ```text
 IV_Project/
@@ -83,6 +144,7 @@ IV_Project/
 ├── assets/
 │   ├── models/
 │   ├── textures/
+│   ├── audio/
 │   └── ...
 │
 ├── shaders/
@@ -92,71 +154,46 @@ IV_Project/
 │
 └── src/
     ├── main.cpp
-    │
-    ├── init.cpp
-    ├── init.h
-    │
-    ├── camera.cpp
-    ├── camera.h
-    ├── third_person_camera.cpp
-    ├── third_person_camera.h
-    │
-    ├── model.cpp
-    ├── model.h
-    ├── mesh.cpp
-    ├── mesh.h
-    │
-    ├── shader.cpp
-    ├── shader.h
-    │
-    ├── terrain_sampler.cpp
-    ├── terrain_sampler.h
-    │
-    ├── player_controller.cpp
-    ├── player_controller.h
-    │
-    ├── glad.c
-    ├── glad/
-    │
-    ├── stb_image.*
-    ├── miniaudio.*
-    │
-    └── imgui-master/
+    ├── init.cpp / .h
+    ├── camera.cpp / .h
+    ├── third_person_camera.cpp / .h
+    ├── model.cpp / .h
+    ├── mesh.cpp / .h
+    ├── shader.cpp / .h
+    ├── terrain_sampler.cpp / .h
+    ├── player_controller.cpp / .h
+    └── ...
 ```
 
 ---
 
-## Rendering Architecture
+## 🎬 Rendering Architecture
 
-The application is organized around a conventional real-time rendering pipeline.
+The application follows a conventional real-time rendering loop that coordinates input processing, game-state updates, camera and player transformations, and scene rendering.
 
 ```text
-Application
+Application Loop
+│
+├── GLFW Window & Input Polling
+│
+├── Game State & Delta Time
+│
+├── Camera & Player Controller Updates
+│
+└── Rendering
     │
-    ├── GLFW Window & Input
-    │
-    ├── OpenGL Initialization
-    │
-    ├── Scene / Game State
-    │
-    ├── Camera
-    │
-    ├── Player Controller
-    │
-    └── Rendering
-          │
-          ├── Terrain
-          ├── Environment
-          ├── Characters
-          ├── Instanced Objects
-          └── UI
+    ├── Terrain
+    ├── Environment & Skybox
+    ├── Characters
+    │   ├── Player
+    │   └── Enemies
+    ├── Instanced Vegetation
+    └── Dear ImGui Interface
 ```
-
-The main application loop is responsible for processing input, updating the game state, updating the camera and player, and rendering the scene each frame.
 
 ---
 
-## Controls
+## 🎮 Controls
 
 | Action | Input |
 |---|---|
@@ -165,219 +202,133 @@ The main application loop is responsible for processing input, updating the game
 | Move Backward | `S` |
 | Move Right | `D` |
 | Sprint | `Left Shift` |
-| Camera Look | Mouse |
-| Normal Attack | Right Mouse Button |
+| Camera Look | `Mouse` |
+| Normal Attack | `Right Mouse Button` |
 | Normal Skill | `E` |
 | Ultimate Skill | `Q` |
 | Toggle Fullscreen | `F11` |
-| Quit | `ESC` |
+| Quit Application | `ESC` |
 
 ---
 
-## Requirements
+## 🔧 Requirements
 
 ### Software
 
-- CMake 3.15 or newer
-- C++17-compatible compiler
-- OpenGL 3.3 or newer
+- **CMake 3.15+**
+- A **C++17-compatible compiler**
+  - GCC
+  - Clang
+  - MSVC / Visual Studio 2022
 - Git
-- Internet connection for downloading CMake dependencies
+- An OpenGL 3.3-compatible graphics card and driver
 
-### Windows
+### Platform
 
-Recommended:
+The project is intended to run on:
 
-- Windows 10/11
-- Visual Studio 2019 or newer
-- Visual Studio C++ Desktop Development workload
-
-### Linux
-
-A typical Linux environment requires:
-
-- GCC or Clang
-- CMake
-- OpenGL development libraries
-- X11/Wayland development libraries
-- GLFW dependencies
-
-For Arch Linux, the required packages may vary depending on the installed desktop environment and graphics stack.
+- Windows
+- Linux
 
 ---
 
-## Building
+## 🚀 Building
 
 ### Linux
 
-From the repository root:
+Configure the project:
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+```
+
+Build:
+
+```bash
 cmake --build build -j$(nproc)
 ```
 
-Then run the executable generated inside the build directory.
-
-For example:
+Run:
 
 ```bash
 ./build/IV_Project
 ```
 
-The exact executable location may depend on the CMake configuration.
+### Windows — Visual Studio 2022
 
----
-
-### Windows
-
-Using Visual Studio:
+Configure:
 
 ```powershell
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+```
+
+Build:
+
+```powershell
 cmake --build build --config Release
 ```
 
-Then run:
+Run:
 
 ```powershell
 .\build\Release\IV_Project.exe
 ```
 
----
-
-## Assets and Runtime Files
-
-The application requires its asset and shader files at runtime.
-
-The project uses:
-
-```text
-assets/
-shaders/
-```
-
-If the CMake configuration copies these directories into the executable's output directory, the application can be launched directly from the generated build location.
-
-If models or shaders cannot be found, verify that the executable has access to both directories.
+> **Note:** Make sure the `assets/` and `shaders/` directories are accessible from the application's runtime working directory. If the executable cannot find models, textures, or shaders, check the configured resource paths.
 
 ---
 
-## Important Source Files
+## 🔮 Future Improvements
 
-### `src/main.cpp`
+The project can be extended in several directions:
 
-Application entry point and main game loop.
-
-Responsible for coordinating:
-
-- GLFW/OpenGL initialization
-- ImGui
-- Input handling
-- Scene initialization
-- Player updates
-- Rendering
-- Game/menu state
-
-### `src/shader.*`
-
-Shader abstraction used to:
-
-- Load GLSL shader files
-- Compile shaders
-- Link shader programs
-- Set shader uniforms
-
-### `src/model.*`
-
-Model loading and management using **Assimp**.
-
-### `src/mesh.*`
-
-Represents individual meshes and handles their OpenGL rendering resources.
-
-### `src/player_controller.*`
-
-Controls player movement, states, animation and gameplay-related behavior.
-
-### `src/third_person_camera.*`
-
-Implements the third-person camera system and camera movement/orbit behavior.
-
-### `src/terrain_sampler.*`
-
-Provides terrain-related sampling functionality used by the player and scene systems.
+- [ ] Full combo-based combat system
+- [ ] Blocking and parry mechanics
+- [ ] More advanced enemy AI and state-based behaviors
+- [ ] A* pathfinding and environment-aware navigation
+- [ ] Multiplayer player-vs-player synchronization
+- [ ] More advanced dynamic lighting
+- [ ] Particle effects and environmental VFX
+- [ ] Additional levels and gameplay content
+- [ ] Further rendering and performance optimization
 
 ---
 
-## Graphics Techniques
+## 👥 Project Team & Credits
 
-This project was developed with a particular focus on understanding real-time 3D rendering rather than relying on a complete game engine.
+Developed as a final-year project by **Group II** at the **Department of Information Technology Engineering, Technological University (Mandalay)**.
 
-Some of the major graphics concepts explored include:
+### Supervisor
 
-- Vertex Buffer Objects (VBO)
-- Vertex Array Objects (VAO)
-- Element Buffer Objects (EBO)
-- GLSL shaders
-- Model/View/Projection transformations
-- Texture mapping
-- Normal mapping and lighting techniques
-- Depth testing
-- Alpha blending
-- Skeletal animation
-- Third-person camera systems
-- GPU instancing
-- Framebuffer-based rendering techniques
+**Daw Moh Moh Khaing**  
+Associate Professor
 
----
+### Team
 
-## Development Goals
-
-The project serves as both a playable application and an exploration of real-time graphics programming.
-
-The main goals are:
-
-1. Build a functioning 3D application using a low-level graphics API.
-2. Understand how a 3D scene is transformed from model data into pixels on the screen.
-3. Implement character rendering and animation.
-4. Explore techniques for rendering large numbers of objects efficiently.
-5. Experiment with different rendering architectures and optimization techniques.
-6. Integrate rendering, gameplay, UI and supporting systems into a single application.
+| Name | Role |
+|---|---|
+| **Mg Aung Myo Paing** | Project Leader & Lead Developer |
+| **Ma Thoon Thiri Swe** | Team Member |
+| **Mg Nay Phone Myint** | Team Member |
+| **Mg Kaung Khant Ko Ko** | Team Member |
+| **Ma Khin Yadanar Win** | Team Member |
+| **Mg Hlawn Moe Aung** | Team Member |
 
 ---
 
-## Future Improvements
+## 📚 Academic Context
 
-Possible future work includes:
-
-- Improved rendering and lighting
-- More advanced deferred/hybrid rendering
-- Larger-scale instanced environments
-- Improved animation blending
-- More advanced enemy AI
-- A* pathfinding
-- Collision and physics improvements
-- Network synchronization
-- Persistent player/game data
-- Rendering performance profiling and optimization
+**Project:** Cyber Samurai  
+**Project Type:** Final-Year Project  
+**Department:** Information Technology Engineering  
+**University:** Technological University (Mandalay)  
+**Group:** II  
+**Academic Year:** Final Year
 
 ---
 
-## Authors
+## 📄 License
 
-**IV-BE CEIT Project Team**
+This project was developed for **academic and educational purposes** as part of a final-year university project.
 
-| Name | Role | Primary Contribution |
-|---|---|---|
-| **Aung Myo Pai** | **Lead Developer & System Integrator** | Core rendering engine, rendering pipeline, instancing, skeletal animation, system integration and cross-module debugging |
-
----
-
-## Academic Project
-
-This project was developed as part of the **BE.CEIT final-year project** at:
-
-**Technological University of Mandalay (TUM)**
-
-The project focuses on practical implementation and experimentation with **real-time 3D graphics programming using C++ and OpenGL**.
+Third-party assets, libraries, models, textures, and other resources remain subject to their respective licenses and original creators' rights.
