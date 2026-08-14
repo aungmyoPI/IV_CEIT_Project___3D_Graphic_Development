@@ -24,9 +24,10 @@ FetchContent_Declare(glm GIT_REPOSITORY https://github.com/g-truc/glm.git GIT_TA
 set(ASSIMP_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(ASSIMP_INSTALL OFF CACHE BOOL "" FORCE)
 set(ASSIMP_BUILD_ASSIMP_TOOLS OFF CACHE BOOL "" FORCE)
+set(ASSIMP_WARNINGS_AS_ERRORS OFF CACHE BOOL "" FORCE) # <--- Add this line here
 FetchContent_Declare(
-    assimp 
-    GIT_REPOSITORY https://github.com/assimp/assimp.git 
+    assimp
+    GIT_REPOSITORY https://github.com/assimp/assimp.git
     GIT_TAG v5.3.1
     GIT_SHALLOW ON
 )
@@ -49,8 +50,8 @@ add_library(imgui_lib STATIC
 )
 
 # Tell the compiler where the ImGui headers are
-target_include_directories(imgui_lib PUBLIC 
-    ${IMGUI_DIR} 
+target_include_directories(imgui_lib PUBLIC
+    ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
 )
 
@@ -59,7 +60,7 @@ target_link_libraries(imgui_lib PRIVATE glfw)
 
 # --- 3. Source Management (The Filter) ---
 
-# Get all files in src, but EXCLUDE the imgui-master directory 
+# Get all files in src, but EXCLUDE the imgui-master directory
 # so we don't try to compile the Allegro/Android backends.
 file(GLOB_RECURSE ALL_SRCS "src/*.cpp" "src/*.c")
 
@@ -77,9 +78,9 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 # Link your main app with all libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE 
-    glfw 
-    glm::glm 
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    glfw
+    glm::glm
     assimp::assimp
     imgui_lib
 )

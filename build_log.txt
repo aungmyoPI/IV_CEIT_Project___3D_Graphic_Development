@@ -1,0 +1,586 @@
+-- Using Win32 for window creation
+CMake Deprecation Warning at build/_deps/glm-src/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at build/_deps/glm-src/CMakeLists.txt:2 (cmake_policy):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- GLM: Version 1.0.1
+-- GLM: Disable -Wc++98-compat warnings
+-- GLM: Build with C++ features auto detection
+-- Shared libraries disabled
+-- compiling zlib from sources
+-- Enabled importer formats: AMF 3DS AC ASE ASSBIN B3D BVH COLLADA DXF CSM HMP IRRMESH IQM IRR LWO LWS M3D MD2 MD3 MD5 MDC MDL NFF NDO OFF OBJ OGRE OPENGEX PLY MS3D COB BLEND IFC XGL FBX Q3D Q3BSP RAW SIB SMD STL TERRAGEN 3D X X3D GLTF 3MF MMD
+-- Disabled importer formats:
+-- Enabled exporter formats: OBJ OPENGEX PLY 3DS ASSBIN ASSXML M3D COLLADA FBX STL X X3D GLTF 3MF PBRT ASSJSON STEP
+-- Disabled exporter formats:
+-- Configuring done (2.8s)
+-- Generating done (0.2s)
+-- Build files have been written to: D:/lcmake/IV_Project/build
+ninja: Entering directory `build'
+[1/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/CApi/CInterfaceIOWrapper.cpp.obj
+[2/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/DefaultIOStream.cpp.obj
+[3/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/SGSpatialSort.cpp.obj
+[4/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/IOSystem.cpp.obj
+[5/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Compression.cpp.obj
+[6/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/VertexTriangleAdjacency.cpp.obj
+[7/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/PostStepRegistry.cpp.obj
+[8/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/BaseProcess.cpp.obj
+[9/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/ZipArchiveIOSystem.cpp.obj
+[10/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/DefaultIOSystem.cpp.obj
+[11/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/SpatialSort.cpp.obj
+[12/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/ScenePreprocessor.cpp.obj
+[13/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/TargetAnimation.cpp.obj
+[14/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/BaseImporter.cpp.obj
+[15/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/SkeletonMeshBuilder.cpp.obj
+[16/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/simd.cpp.obj
+[17/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/RemoveComments.cpp.obj
+[18/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Assimp.cpp.obj
+[19/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/scene.cpp.obj
+[20/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/StandardShapes.cpp.obj
+[21/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Importer.cpp.obj
+[22/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Bitmap.cpp.obj
+[23/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/CreateAnimMesh.cpp.obj
+[24/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/ImporterRegistry.cpp.obj
+[25/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Version.cpp.obj
+[26/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/material.cpp.obj
+[27/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/SceneCombiner.cpp.obj
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:987:14: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'aiFace' [-Wnontrivial-memcall]
+  987 |     ::memcpy(dest, old, sizeof(Type) * num);
+      |              ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:1096:5: note: in instantiation of function template specialization 'Assimp::GetArrayCopy<aiFace>' requested here
+ 1096 |     GetArrayCopy(dest->mFaces, dest->mNumFaces);
+      |     ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:987:14: note: explicitly cast the pointer to silence this warning
+  987 |     ::memcpy(dest, old, sizeof(Type) * num);
+      |              ^
+      |              (void*)
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:987:14: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'aiMeshMorphKey' [-Wnontrivial-memcall]
+  987 |     ::memcpy(dest, old, sizeof(Type) * num);
+      |              ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:1244:5: note: in instantiation of function template specialization 'Assimp::GetArrayCopy<aiMeshMorphKey>' requested here
+ 1244 |     GetArrayCopy(dest->mKeys, dest->mNumKeys);
+      |     ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/Common/SceneCombiner.cpp:987:14: note: explicitly cast the pointer to silence this warning
+  987 |     ::memcpy(dest, old, sizeof(Type) * num);
+      |              ^
+      |              (void*)
+2 warnings generated.
+[28/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Exceptional.cpp.obj
+[29/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Geometry/GeometryUtils.cpp.obj
+[30/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Subdivision.cpp.obj
+[31/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/AssertHandler.cpp.obj
+[32/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/CApi/AssimpCExport.cpp.obj
+[33/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Base64.cpp.obj
+[34/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/DefaultLogger.cpp.obj
+[35/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ConvertToLHProcess.cpp.obj
+[36/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/CalcTangentsProcess.cpp.obj
+[37/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ComputeUVMappingProcess.cpp.obj
+[38/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Common/Exporter.cpp.obj
+[39/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/FindInstancesProcess.cpp.obj
+[40/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/EmbedTexturesProcess.cpp.obj
+[41/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/GenFaceNormalsProcess.cpp.obj
+[42/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/DropFaceNormalsProcess.cpp.obj
+[43/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/FindDegenerates.cpp.obj
+[44/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/FixNormalsStep.cpp.obj
+[45/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/FindInvalidDataProcess.cpp.obj
+[46/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/GenVertexNormalsProcess.cpp.obj
+[47/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ImproveCacheLocality.cpp.obj
+[48/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/RemoveVCProcess.cpp.obj
+[49/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/PretransformVertices.cpp.obj
+[50/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/LimitBoneWeightsProcess.cpp.obj
+[51/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/RemoveRedundantMaterials.cpp.obj
+[52/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/SortByPTypeProcess.cpp.obj
+[53/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/SplitLargeMeshes.cpp.obj
+[54/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/TriangulateProcess.cpp.obj
+[55/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/JoinVerticesProcess.cpp.obj
+[56/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/TextureTransform.cpp.obj
+[57/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ValidateDataStructure.cpp.obj
+[58/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/OptimizeGraph.cpp.obj
+[59/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/OptimizeMeshes.cpp.obj
+[60/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ProcessHelper.cpp.obj
+[61/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/GenBoundingBoxesProcess.cpp.obj
+[62/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/MakeVerboseFormat.cpp.obj
+[63/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ScaleProcess.cpp.obj
+[64/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/DeboneProcess.cpp.obj
+[65/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/ArmaturePopulate.cpp.obj
+[66/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/STEPParser/STEPFileEncoding.cpp.obj
+[67/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Material/MaterialSystem.cpp.obj
+[68/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/PostProcessing/SplitByBoneCountProcess.cpp.obj
+[69/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/AMF/AMFImporter_Geometry.cpp.obj
+[70/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/AMF/AMFImporter_Material.cpp.obj
+[71/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3DS/3DSConverter.cpp.obj
+[72/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/AMF/AMFImporter.cpp.obj
+[73/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/AMF/AMFImporter_Postprocess.cpp.obj
+[74/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assbin/AssbinLoader.cpp.obj
+[75/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/STEPParser/STEPFileReader.cpp.obj
+[76/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Collada/ColladaHelper.cpp.obj
+[77/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/AC/ACLoader.cpp.obj
+[78/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/ASE/ASELoader.cpp.obj
+[79/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3DS/3DSLoader.cpp.obj
+[80/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/B3D/B3DImporter.cpp.obj
+[81/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/ASE/ASEParser.cpp.obj
+[82/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/BVH/BVHLoader.cpp.obj
+[83/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/CSM/CSMLoader.cpp.obj
+[84/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/HMP/HMPLoader.cpp.obj
+[85/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/M3D/M3DImporter.cpp.obj
+[86/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/M3D/M3DWrapper.cpp.obj
+[87/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IQM/IQMImporter.cpp.obj
+[88/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Irr/IRRShared.cpp.obj
+[89/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/LWO/LWOAnimation.cpp.obj
+[90/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/DXF/DXFLoader.cpp.obj
+[91/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/LWO/LWOBLoader.cpp.obj
+[92/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Irr/IRRMeshLoader.cpp.obj
+[93/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Collada/ColladaLoader.cpp.obj
+[94/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/LWO/LWOMaterial.cpp.obj
+[95/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Irr/IRRLoader.cpp.obj
+[96/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MD2/MD2Loader.cpp.obj
+[97/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/LWS/LWSLoader.cpp.obj
+[98/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MDC/MDCLoader.cpp.obj
+[99/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MD5/MD5Parser.cpp.obj
+[100/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/LWO/LWOLoader.cpp.obj
+[101/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MD5/MD5Loader.cpp.obj
+[102/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MD3/MD3Loader.cpp.obj
+[103/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MDL/HalfLife/UniqueNameGenerator.cpp.obj
+[104/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MDL/MDLMaterialLoader.cpp.obj
+[105/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MDL/MDLLoader.cpp.obj
+[106/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Collada/ColladaParser.cpp.obj
+[107/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/OFF/OFFLoader.cpp.obj
+[108/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/NDO/NDOLoader.cpp.obj
+[109/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Obj/ObjFileImporter.cpp.obj
+[110/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Obj/ObjFileMtlImporter.cpp.obj
+[111/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Obj/ObjFileParser.cpp.obj
+[112/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/NFF/NFFLoader.cpp.obj
+[113/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MDL/HalfLife/HL1MDLLoader.cpp.obj
+[114/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ogre/OgreImporter.cpp.obj
+[115/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ply/PlyLoader.cpp.obj
+[116/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ogre/OgreStructs.cpp.obj
+[117/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ogre/OgreMaterial.cpp.obj
+[118/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ogre/OgreBinarySerializer.cpp.obj
+[119/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ply/PlyParser.cpp.obj
+[120/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MS3D/MS3DLoader.cpp.obj
+[121/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/OpenGEX/OpenGEXImporter.cpp.obj
+[122/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ogre/OgreXmlSerializer.cpp.obj
+[123/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderModifier.cpp.obj
+[124/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderDNA.cpp.obj
+[125/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderBMesh.cpp.obj
+[126/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderCustomData.cpp.obj
+[127/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/COB/COBLoader.cpp.obj
+[128/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderTessellator.cpp.obj
+[129/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderLoader.cpp.obj
+[130/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCReaderGen2_2x3.cpp.obj
+[131/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCUtil.cpp.obj
+[132/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCProfile.cpp.obj
+[133/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCMaterial.cpp.obj
+[134/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCCurve.cpp.obj
+[135/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXImporter.cpp.obj
+[136/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Blender/BlenderScene.cpp.obj
+[137/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCLoader.cpp.obj
+[138/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCGeometry.cpp.obj
+[139/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXTokenizer.cpp.obj
+[140/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCBoolean.cpp.obj
+[141/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXUtil.cpp.obj
+[142/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXParser.cpp.obj
+[143/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXModel.cpp.obj
+[144/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/XGL/XGLLoader.cpp.obj
+[145/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXAnimation.cpp.obj
+[146/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXNodeAttribute.cpp.obj
+[147/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXMaterial.cpp.obj
+[148/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCOpenings.cpp.obj
+[149/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXProperties.cpp.obj
+[150/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXDeformer.cpp.obj
+[151/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXMeshGeometry.cpp.obj
+[152/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXDocument.cpp.obj
+[153/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXBinaryTokenizer.cpp.obj
+[154/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXDocumentUtil.cpp.obj
+[155/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Q3BSP/Q3BSPFileParser.cpp.obj
+[156/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Q3D/Q3DLoader.cpp.obj
+[157/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Q3BSP/Q3BSPFileImporter.cpp.obj
+[158/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXConverter.cpp.obj
+[159/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Raw/RawLoader.cpp.obj
+[160/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/STL/STLLoader.cpp.obj
+[161/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Terragen/TerragenLoader.cpp.obj
+[162/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/SIB/SIBImporter.cpp.obj
+[163/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/IFC/IFCReaderGen1_2x3.cpp.obj
+[164/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/SMD/SMDLoader.cpp.obj
+[165/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Unreal/UnrealLoader.cpp.obj
+[166/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X/XFileImporter.cpp.obj
+[167/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Geometry2D.cpp.obj
+[168/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Group.cpp.obj
+[169/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter.cpp.obj
+[170/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Networking.cpp.obj
+[171/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Geometry3D.cpp.obj
+[172/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Metadata.cpp.obj
+[173/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Light.cpp.obj
+[174/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X/XFileParser.cpp.obj
+[175/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Rendering.cpp.obj
+[176/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Shape.cpp.obj
+[177/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Texturing.cpp.obj
+[178/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/glTF/glTFCommon.cpp.obj
+[179/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DImporter_Postprocess.cpp.obj
+[180/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DGeoHelper.cpp.obj
+[181/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DXmlHelper.cpp.obj
+[182/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/OpenGEX/OpenGEXExporter.cpp.obj
+[183/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assbin/AssbinExporter.cpp.obj
+[184/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/M3D/M3DExporter.cpp.obj
+[185/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3MF/D3MFImporter.cpp.obj
+[186/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MMD/MMDPmxParser.cpp.obj
+[187/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3MF/D3MFOpcPackage.cpp.obj
+[188/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/MMD/MMDImporter.cpp.obj
+[189/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3MF/XmlSerializer.cpp.obj
+[190/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assxml/AssxmlExporter.cpp.obj
+[191/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Ply/PlyExporter.cpp.obj
+[192/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Obj/ObjExporter.cpp.obj
+[193/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3DS/3DSExporter.cpp.obj
+[194/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assxml/AssxmlFileWriter.cpp.obj
+[195/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assbin/AssbinFileWriter.cpp.obj
+[196/252] Building C object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assjson/cencode.c.obj
+[197/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXExportProperty.cpp.obj
+[198/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/STL/STLExporter.cpp.obj
+[199/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXExportNode.cpp.obj
+[200/252] Building C object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/unzip/ioapi.c.obj
+[201/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X/XFileExporter.cpp.obj
+[202/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/X3D/X3DExporter.cpp.obj
+[203/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/3MF/D3MFExporter.cpp.obj
+[204/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assjson/mesh_splitter.cpp.obj
+[205/252] Building C object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/unzip/unzip.c.obj
+[206/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/poly2tri/poly2tri/sweep/advancing_front.cc.obj
+[207/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Collada/ColladaExporter.cpp.obj
+[208/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Assjson/json_exporter.cpp.obj
+[209/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/Pbrt/PbrtExporter.cpp.obj
+[210/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/poly2tri/poly2tri/sweep/cdt.cc.obj
+[211/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/poly2tri/poly2tri/common/shapes.cc.obj
+[212/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/glTF/glTFImporter.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFImporter.cpp:45:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:28:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFImporter.cpp:45:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:31:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h:38:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCEncodeParams' [-Wnontrivial-memcall]
+   38 |                                         memset(this, 0, sizeof(SC3DMCEncodeParams));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h:38:48: note: explicitly cast the pointer to silence this warning
+   38 |                                         memset(this, 0, sizeof(SC3DMCEncodeParams));
+      |                                                ^
+      |                                                (void*)
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFImporter.cpp:45:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:30:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcIndexedFaceSet.h:39:53: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::IndexedFaceSet<unsigned short>' [-Wnontrivial-memcall]
+   39 |                                              memset(this, 0, sizeof(IndexedFaceSet));
+      |                                                     ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:791:40: note: in instantiation of member function 'o3dgc::IndexedFaceSet<unsigned short>::IndexedFaceSet' requested here
+  791 |     o3dgc::IndexedFaceSet<IndicesType> ifs;
+      |                                        ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcIndexedFaceSet.h:39:53: note: explicitly cast the pointer to silence this warning
+   39 |                                              memset(this, 0, sizeof(IndexedFaceSet));
+      |                                                     ^
+      |                                                     (void*)
+3 warnings generated.
+[213/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/poly2tri/poly2tri/sweep/sweep_context.cc.obj
+[214/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/Open3DGC/o3dgcArithmeticCodec.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC/o3dgcArithmeticCodec.cpp:74:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcArithmeticCodec.h:77:
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+1 warning generated.
+[215/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/Step/StepExporter.cpp.obj
+[216/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/poly2tri/poly2tri/sweep/sweep.cc.obj
+[217/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/Open3DGC/o3dgcTools.cpp.obj
+[218/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/OpenDDLCommon.cpp.obj
+[219/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/Open3DGC/o3dgcDynamicVectorEncoder.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC/o3dgcDynamicVectorEncoder.cpp:22:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcDVEncodeParams.h:28:
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+1 warning generated.
+[220/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/DDLNode.cpp.obj
+[221/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/Open3DGC/o3dgcDynamicVectorDecoder.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC/o3dgcDynamicVectorDecoder.cpp:22:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcDynamicVectorDecoder.h:28:
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+1 warning generated.
+[222/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/Open3DGC/o3dgcTriangleFans.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC/o3dgcTriangleFans.cpp:23:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcTriangleFans.h:28:
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/contrib/Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+1 warning generated.
+[223/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/Value.cpp.obj
+[224/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/OpenDDLStream.cpp.obj
+[225/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/OpenDDLExport.cpp.obj
+[226/252] Building CXX object CMakeFiles/IV_Project.dir/src/callback.cpp.obj
+In file included from D:/lcmake/IV_Project/src/callback.cpp:1:
+D:/lcmake/IV_Project/src\callback.h:4:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/callback.cpp:1:
+In file included from D:/lcmake/IV_Project/src\callback.h:5:
+D:/lcmake/IV_Project/src\processInput.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+2 warnings generated.
+[227/252] Building CXX object CMakeFiles/IV_Project.dir/src/coordinate_system.cpp.obj
+[228/252] Building CXX object CMakeFiles/IV_Project.dir/src/camera.cpp.obj
+[229/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/openddlparser/code/OpenDDLParser.cpp.obj
+[230/252] Linking CXX static library imgui_lib.lib
+[231/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/glTF2/glTF2Importer.cpp.obj
+[232/252] Building CXX object CMakeFiles/IV_Project.dir/src/init.cpp.obj
+In file included from D:/lcmake/IV_Project/src/init.cpp:1:
+D:/lcmake/IV_Project/src\init.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/init.cpp:1:
+In file included from D:/lcmake/IV_Project/src\init.h:7:
+D:/lcmake/IV_Project/src\callback.h:4:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/init.cpp:1:
+In file included from D:/lcmake/IV_Project/src\init.h:7:
+In file included from D:/lcmake/IV_Project/src\callback.h:5:
+D:/lcmake/IV_Project/src\processInput.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+3 warnings generated.
+[233/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/clipper/clipper.cpp.obj
+[234/252] Building C object _deps/assimp-build/code/CMakeFiles/assimp.dir/__/contrib/zip/src/zip.c.obj
+[235/252] Building CXX object CMakeFiles/IV_Project.dir/src/processInput.cpp.obj
+In file included from D:/lcmake/IV_Project/src/processInput.cpp:1:
+D:/lcmake/IV_Project/src\processInput.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[236/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/glTF2/glTF2Exporter.cpp.obj
+[237/252] Building CXX object CMakeFiles/IV_Project.dir/src/mesh.cpp.obj
+In file included from D:/lcmake/IV_Project/src/mesh.cpp:1:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[238/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/FBX/FBXExporter.cpp.obj
+[239/252] Linking CXX static library _deps\glm-build\glm\glm.lib
+[240/252] Building CXX object CMakeFiles/IV_Project.dir/src/model.cpp.obj
+In file included from D:/lcmake/IV_Project/src/model.cpp:1:
+In file included from D:/lcmake/IV_Project/src\model.h:18:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[241/252] Building CXX object CMakeFiles/IV_Project.dir/src/skybox_renderer.cpp.obj
+In file included from D:/lcmake/IV_Project/src/skybox_renderer.cpp:1:
+In file included from D:/lcmake/IV_Project/src\skybox_renderer.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[242/252] Building CXX object CMakeFiles/IV_Project.dir/src/main.cpp.obj
+In file included from D:/lcmake/IV_Project/src/main.cpp:10:
+D:/lcmake/IV_Project/src\filesystem.h:23:35: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+   23 |     static char const * envRoot = getenv("LOGL_ROOT_PATH");
+      |                                   ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+In file included from D:/lcmake/IV_Project/src/main.cpp:12:
+D:/lcmake/IV_Project/src\init.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/main.cpp:12:
+In file included from D:/lcmake/IV_Project/src\init.h:7:
+D:/lcmake/IV_Project/src\callback.h:4:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/main.cpp:12:
+In file included from D:/lcmake/IV_Project/src\init.h:7:
+In file included from D:/lcmake/IV_Project/src\callback.h:5:
+D:/lcmake/IV_Project/src\processInput.h:5:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/main.cpp:13:
+In file included from D:/lcmake/IV_Project/src\model.h:18:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/main.cpp:14:
+D:/lcmake/IV_Project/src\player_controller.h:4:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+D:/lcmake/IV_Project/src/main.cpp:197:29: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  197 |                 ImGui::Text(text);
+      |                             ^~~~
+D:/lcmake/IV_Project/src/main.cpp:197:29: note: treat the string as an argument to avoid this
+  197 |                 ImGui::Text(text);
+      |                             ^
+      |                             "%s", 
+7 warnings generated.
+[243/252] Building CXX object CMakeFiles/IV_Project.dir/src/shader.cpp.obj
+In file included from D:/lcmake/IV_Project/src/shader.cpp:1:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[244/252] Building CXX object _deps/assimp-build/code/CMakeFiles/assimp.dir/AssetLib/glTF/glTFExporter.cpp.obj
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFExporter.cpp:46:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAssetWriter.h:55:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:28:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcCommon.h:167:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCStats' [-Wnontrivial-memcall]
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcCommon.h:167:48: note: explicitly cast the pointer to silence this warning
+  167 |                                         memset(this, 0, sizeof(SC3DMCStats));
+      |                                                ^
+      |                                                (void*)
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFExporter.cpp:46:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAssetWriter.h:55:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:31:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h:38:48: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::SC3DMCEncodeParams' [-Wnontrivial-memcall]
+   38 |                                         memset(this, 0, sizeof(SC3DMCEncodeParams));
+      |                                                ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h:38:48: note: explicitly cast the pointer to silence this warning
+   38 |                                         memset(this, 0, sizeof(SC3DMCEncodeParams));
+      |                                                ^
+      |                                                (void*)
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/AssetLib/glTF/glTFExporter.cpp:46:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF/glTFAssetWriter.h:55:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.h:1012:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:52:
+In file included from D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC/o3dgcSC3DMCDecoder.h:30:
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcIndexedFaceSet.h:39:53: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'o3dgc::IndexedFaceSet<unsigned short>' [-Wnontrivial-memcall]
+   39 |                                              memset(this, 0, sizeof(IndexedFaceSet));
+      |                                                     ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code\AssetLib/glTF\glTFAsset.inl:791:40: note: in instantiation of member function 'o3dgc::IndexedFaceSet<unsigned short>::IndexedFaceSet' requested here
+  791 |     o3dgc::IndexedFaceSet<IndicesType> ifs;
+      |                                        ^
+D:/lcmake/IV_Project/build/_deps/assimp-src/code/../contrib\Open3DGC\o3dgcIndexedFaceSet.h:39:53: note: explicitly cast the pointer to silence this warning
+   39 |                                              memset(this, 0, sizeof(IndexedFaceSet));
+      |                                                     ^
+      |                                                     (void*)
+3 warnings generated.
+[245/252] Building CXX object CMakeFiles/IV_Project.dir/src/player_controller.cpp.obj
+In file included from D:/lcmake/IV_Project/src/player_controller.cpp:1:
+D:/lcmake/IV_Project/src\player_controller.h:4:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/player_controller.cpp:1:
+In file included from D:/lcmake/IV_Project/src\player_controller.h:5:
+In file included from D:/lcmake/IV_Project/src\model.h:18:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+In file included from D:/lcmake/IV_Project/src/player_controller.cpp:3:
+D:/lcmake/IV_Project/src\filesystem.h:23:35: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+   23 |     static char const * envRoot = getenv("LOGL_ROOT_PATH");
+      |                                   ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+3 warnings generated.
+[246/252] Building CXX object CMakeFiles/IV_Project.dir/src/third_person_camera.cpp.obj
+In file included from D:/lcmake/IV_Project/src/third_person_camera.cpp:1:
+In file included from D:/lcmake/IV_Project/src\third_person_camera.h:4:
+In file included from D:/lcmake/IV_Project/src\terrain_sampler.h:7:
+In file included from D:/lcmake/IV_Project/src\model.h:18:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[247/252] Linking CXX static library _deps\assimp-build\lib\assimp.lib
+[248/252] Building CXX object CMakeFiles/IV_Project.dir/src/terrain_sampler.cpp.obj
+In file included from D:/lcmake/IV_Project/src/terrain_sampler.cpp:1:
+In file included from D:/lcmake/IV_Project/src\terrain_sampler.h:7:
+In file included from D:/lcmake/IV_Project/src\model.h:18:
+In file included from D:/lcmake/IV_Project/src\mesh.h:5:
+D:/lcmake/IV_Project/src\shader.h:8:10: warning: non-portable path to file '<GLFW/glfw3.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    8 | #include <glfw/glfw3.h>
+      |          ^~~~~~~~~~~~~~
+      |          <GLFW/glfw3.h>
+1 warning generated.
+[249/252] Building CXX object CMakeFiles/IV_Project.dir/src/stb_image.cpp.obj
+[250/252] Building C object CMakeFiles/IV_Project.dir/src/glad.c.obj
+[251/252] Building CXX object CMakeFiles/IV_Project.dir/src/miniaudio.cpp.obj
+[252/252] Linking CXX executable IV_Project.exe
+[INFO] Terrain sampler grid built: 366x366
+[INFO] Terrain height range worldY: min=-50 max=607.9
