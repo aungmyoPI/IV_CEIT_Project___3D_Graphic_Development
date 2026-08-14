@@ -214,13 +214,13 @@ The project is intended to run on:
 Configure the project:
 
 ```bash
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake -B build -G Ninja
 ```
 
 Build:
 
 ```bash
-cmake --build build -j$(nproc)
+ninja -C build
 ```
 
 Run:
