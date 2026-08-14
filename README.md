@@ -109,31 +109,6 @@ Instancing reduces the CPU overhead associated with issuing separate draw calls 
 
 ---
 
-## 🖼️ Media
-
-> Replace the placeholder below with an actual gameplay screenshot or animated GIF when available.
-
-<p align="center">
-  <img src="assets/screenshot_placeholder.png" alt="Cyber Samurai Gameplay Screenshot" width="90%"/>
-</p>
-
-### Gameplay GIF
-
-```text
-assets/
-└── gameplay.gif
-```
-
-Once a GIF is available, it can be embedded here:
-
-```markdown
-<p align="center">
-  <img src="assets/gameplay.gif" alt="Cyber Samurai Gameplay" width="90%"/>
-</p>
-```
-
----
-
 ## 🏗️ Project Structure
 
 ```text
